@@ -21,13 +21,13 @@
 // Layer names
 enum layers{
     WIN_DV_BASE,
-    WIN_DV_FN
+    WIN_DV_FN,
     WIN_QW_BASE,
     WIN_QW_FN,
     WIN_DV_QDRAW,
     WIN_DV_QCODE,
     WIN_QW_QDRAW,
-    WIN_QW_QCODE,
+    WIN_QW_QCODE
 };
 
 // Custom keycode names
@@ -57,9 +57,9 @@ enum custom_keycodes {
 // VS Code short    cut macros
 #define KC_V_CD     LCTL(LSFT(KC_P))    // Command Palette
 #define KC_V_OP     LCTL(KC_P)          // Open File
-#define KC_V_CB     LSFT(LALT(KP_A))    // Comment block
+#define KC_V_CB     LSFT(LALT(KC_A))    // Comment block
 
-#define KC_V_AO     LCTL(LSFT(KP_L))    // Select all occurrences
+#define KC_V_AO     LCTL(LSFT(KC_L))    // Select all occurrences
 #define KC_V_FD     LCTL(KC_F)          // Find
 #define KC_V_RP     LCTL(KC_H)          // Replace
 #define KC_V_PO     LSFT(KC_F3)         // Previous occurrence in Find
@@ -155,7 +155,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         }
         break;
-    }
     case MULTIDOWN:
         if (record->event.pressed) {
             // Press DOWN key several times
@@ -164,6 +163,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         }
         break;
+    }
     return true;
 };
 
